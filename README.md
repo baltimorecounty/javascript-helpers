@@ -4,6 +4,10 @@ Javascript helpers that will solve small problems and will work in the County's 
 
 ## Getting Started
 
+### Available Modules
+
+- [ApiHelpers](src/ApiHelpers.md);
+
 ### Installation
 
 1. Clone this repository
