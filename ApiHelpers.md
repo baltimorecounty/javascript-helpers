@@ -1,9 +1,10 @@
-<a name="display">ApiHelpers.display</a>
+# ApiHelpers
+
+Make working with api's easier.
 
 ## display(options) ⇒ <code>Promise</code>
 Displays response of a given api endpoint, through a Handlebars template.
 
-**Kind**: global function
 **Returns**: <code>Promise</code> - Promise with the data returned from the api call
 
 | Param                   | Type                | Default                                                                              | Description                                                                               |
