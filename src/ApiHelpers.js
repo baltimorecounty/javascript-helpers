@@ -1,4 +1,5 @@
 require('es6-promise').polyfill();
+require('regenerator-runtime/runtime.js');
 import axios from 'axios';
 import handlebars from 'handlebars';
 
