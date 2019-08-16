@@ -1,0 +1,29 @@
+{
+	"name": "test-jsx",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "jest",
+		"build-api-helpers": "",
+		"generate-md": "jsdoc2md"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^0.19.0",
+		"es6-promise": "^4.2.8",
+		"handlebars": "^4.1.2"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.5.5",
+		"@babel/plugin-transform-react-jsx": "^7.3.0",
+		"@babel/preset-env": "^7.5.5",
+		"@testing-library/dom": "^6.0.0",
+		"@testing-library/jest-dom": "^4.0.0",
+		"axios-mock-adapter": "^1.17.0",
+		"babel-jest": "^24.8.0",
+		"jest": "^24.8.0",
+		"jsdoc-to-markdown": "^5.0.0"
+	}
+}
