@@ -1,29 +1,37 @@
 {
 	"name": "test-jsx",
-	"version": "1.0.0",
+	"version": "0.0.1",
 	"description": "",
 	"main": "index.js",
 	"scripts": {
 		"test": "jest",
-		"build-api-helpers": "",
+		"build": "webpack",
+		"watch:build": "webpack --watch",
 		"generate-md": "jsdoc2md"
 	},
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
+		"@babel/polyfill": "^7.4.4",
 		"axios": "^0.19.0",
 		"es6-promise": "^4.2.8",
-		"handlebars": "^4.1.2"
+		"handlebars": "^4.1.2",
+		"regenerator": "^0.14.2"
 	},
 	"devDependencies": {
+		"@babel/cli": "^7.5.5",
 		"@babel/core": "^7.5.5",
 		"@babel/plugin-transform-react-jsx": "^7.3.0",
 		"@babel/preset-env": "^7.5.5",
 		"@testing-library/dom": "^6.0.0",
 		"@testing-library/jest-dom": "^4.0.0",
 		"axios-mock-adapter": "^1.17.0",
+		"babel-cli": "^6.26.0",
 		"babel-jest": "^24.8.0",
+		"babel-loader": "^8.0.6",
 		"jest": "^24.8.0",
-		"jsdoc-to-markdown": "^5.0.0"
+		"jsdoc-to-markdown": "^5.0.0",
+		"webpack": "^4.39.2",
+		"webpack-cli": "^3.3.6"
 	}
 }
