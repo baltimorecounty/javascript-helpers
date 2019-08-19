@@ -4,41 +4,8 @@ Exposes [A11y Toggle](http://edenspiekermann.github.io/a11y-toggle/) for an acce
 
 ## Usage
 
-### Preferred
+Since this helper is just exposing [A11y Toggle](http://edenspiekermann.github.io/a11y-toggle/) follow their [usage guidelines](http://edenspiekermann.github.io/a11y-toggle/).
 
-Our preferred usage, uses a template file instead string as a template
+The one difference is that this helper will be exported to `./lib/CollapseHelper.js`.
 
-```html
-<script>
-(function() {
-  BcApiHelpers.display({
-    url: 'http://www.abc.com/api/examples',
-    params: {
-      type: 'all'
-    },
-    templateUrl: '/templates/example.template.handlebars',
-    targetId: 'example',
-    errorTemplate: '<div class="alert alert-error>Unable to display examples. Please try again later.<p></p></div>"'
-  });
-})();
-</script>
-```
-
-### Alternate
-
-```html
-<script>
-(function() {
-  const exampleTemplate = "<ul>{{#each examples}}<li>{{example.name}}</li>{{/each}}</ul>";
-  BcApiHelpers.display({
-    url: 'http://www.abc.com/api/examples',
-    params: {
-      type: 'all'
-    },
-    template: exampleTemplate,
-    targetId: 'example'
-  });
-})();
-
-</script>
-```
+*Note*: Depending on which example you will use, there will be specific CSS you will need to add to your web app or website.
