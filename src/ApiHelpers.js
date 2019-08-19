@@ -1,7 +1,7 @@
 require('es6-promise').polyfill();
 require('regenerator-runtime/runtime.js');
 import axios from 'axios';
-import handlebars from 'handlebars';
+import Handlebars from './Handlebars';
 
 const getTemplate = async (handlebarsTemplateUrl) => {
 	try {
@@ -14,7 +14,7 @@ const getTemplate = async (handlebarsTemplateUrl) => {
 };
 
 const setHtml = (targetId, handleBarsTemplate, data = {}) => {
-	const html = handlebars.compile(handleBarsTemplate)(data);
+	const html = Handlebars.compile(handleBarsTemplate)(data);
 	document.getElementById(targetId).innerHTML = html;
 };
 
