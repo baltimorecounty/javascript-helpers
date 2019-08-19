@@ -1,1 +1,1 @@
-export { default } from 'a11y-toggle';
+export { default as a11yToggle } from 'a11y-toggle';
