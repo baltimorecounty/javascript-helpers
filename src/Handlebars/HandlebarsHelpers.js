@@ -14,11 +14,11 @@ const limit = (arr, limit) => {
 };
 
 /**
- * Limits a list of array based on the number of items you want to skip from the start of the array.
+ * Limits an array based on the number of items you want to skip from the start of the array.
  * @param {array} arr Array items to limit
  * @param {number} numberOfItemsToSkip Number of array items you wish to skip
  *
- * @returns A new array containing the limited items.
+ * @returns A new array containing all the remaining items after the skipped records.
  */
 const skip = (arr, numberOfItemsToSkip) => {
 	if (!Array.isArray(arr)) {
