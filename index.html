@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="">
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,25 +9,30 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      [aria-hidden='true'],
+      [data-a11y-toggle]:not([aria-controls]) {
+        display: none;
+      }
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.3/html5shiv.js"></script>
-			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-		<![endif]-->
+    </style>
   </head>
 
   <body>
     <h1 class="text-center">Hello World Test</h1>
-	<div id="app"></div>
-	<script src="/lib/ApiHelpers.min.js"></script>
+    <div id="app"></div>
+    <script src="/lib/CollapseHelper.min.js"></script>
+    <script src="/lib/ApiHelpers.min.js"></script>
     <script>
       var petsTemplate = "{{#each (limit Data 3)}}<p>{{AnimalName}}</p>{{/each}}";
+      petsTemplate += "<div id=\"target\">{{#each (skip Data 3)}}<p>{{AnimalName}}</p>{{/each}}</div>";
+      petsTemplate += "<button type=\"button\" data-a11y-toggle=\"target\">Show More Pets</button>";
       BcApiHelpers.display({
         url: 'http://localhost:54727/api/pets?petType=dog&status=lost',
         template: petsTemplate,
         targetId: 'app'
+      }).then(function() {
+        window.a11yToggle();
       });
     </script>
   </body>
