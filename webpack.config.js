@@ -3,7 +3,8 @@ const path = require('path');
 module.exports = {
 	mode: 'production',
 	entry: {
-		ApiHelpers: './src/ApiHelpers.js'
+		ApiHelpers: './src/ApiHelpers.js',
+		CollapseHelper: './src/CollapseHelper.js'
 	},
 	output: {
 		path: path.join(__dirname, 'lib'),
